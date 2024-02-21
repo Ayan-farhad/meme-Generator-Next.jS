@@ -1,0 +1,27 @@
+<!-- 
+// Next JS Features
+// 1. SSR server side rendering + CSR 
+// 2. Predefined Routes. (Static vs Dynamic)
+// 3. Image
+// 4. Loading.js
+// 5. Error.js ( Error.js must be client component)('use client')
+
+
+// Problems :
+// 1. Database mein data change hogaya but next js mein cache mein save hone ki waja se data change nahi horaha
+// 2. Nextjs sirf shuru mein data fetch karega.
+
+// Solutions :
+// 1. fetch ('your api' , {cache: 'no-store'}) (cache mein save hi nahi hoga isme)
+// 2. fetch ('your api' , {next: {revalidate: time is sec } } ) (cache mein save hi nahi hoga isme)
+
+// Data Fetching Scenarios:
+// 1. Agar database mein data change hi nahi hona kabhi , tou simple fetch use karein , jou data cache mein dal dega or hamesha cache se hi load karega 
+//  2. Agar Db mein data continuous change horaha hai bht jaldi, tou fetch ke sath {cache: 'no-store'} yse kareingy.
+// 3. Agar Db mein data kuch hafte baad change hota hou, jese ke 2 din baad ya kuch second baad tou {next: {revalidate: time is sec } }
+
+
+
+// Dynamic Routing in NEXT JS 
+
+// Create a folder detail, create another folder in detail folder but the name will be [any name] -->
