@@ -11,16 +11,16 @@ async function Dashboard() {
     <>
       <div style={mainDiv}>
         <h1>Meme Generate</h1>
-        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+        <div style={styleDiv}>
           {response.data.memes.map((item, index) => {
             return (
-              <div key={index} style={{ width: '300px', margin: '10px', boxShadow: '0px 4px 8px black', borderRadius: '8px' }} > 
-               <img src={item.url} style={{ width: '100%', height: 'auto', borderRadius: '8px 8px 0 0' }} />
-                
+              <div key={index} style={imgDiv} >
+                <img src={item.url} style={imageStyle} />
+
                 <div style={{ padding: '16px' }}>
-                  <h2 style={{ margin: '10px 0', fontSize: '18px' }}>Name: {item.name}</h2>
+                  <h2 style={h2Name}>Name: {item.name}</h2>
                   <Link href={`/meme-detail?url=${item.url}`}>
-                    <button style={{ cursor: 'pointer', textAlign: 'center', padding: '8px 16px', borderRadius: '4px', background: '#007bff', color: '#fff' }}>Select this meme</button>
+                    <button style={button}>Select this meme</button>
                   </Link>
                 </div>
               </div>
@@ -37,4 +37,32 @@ export default Dashboard;
 const mainDiv = {
   fontFamily: 'Arial, sans-serif',
   padding: '20px'
-}
+};
+const styleDiv = {
+  display: 'flex',
+  flexWrap: 'wrap',
+  justifyContent: 'center'
+};
+const imgDiv = {
+  width: '300px',
+  margin: '10px',
+  boxShadow: '0px 4px 8px black',
+  borderRadius: '8px'
+};
+const imageStyle ={ 
+  width: '100%', 
+  height: 'auto', 
+  borderRadius: '8px 8px 0 0' 
+};
+const h2Name = {
+  margin: '10px 0',
+  fontSize: '18px'
+};
+const button = {
+  cursor: 'pointer',
+  textAlign: 'center',
+  padding: '8px 16px',
+  borderRadius: '4px',
+  background: '#007bff',
+  color: '#fff'
+};
