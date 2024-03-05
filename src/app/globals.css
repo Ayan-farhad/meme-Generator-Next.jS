@@ -31,3 +31,8 @@ body {
     text-wrap: balance;
   }
 } */
+
+body{
+  background-color: #f5f5f5;
+  background-image: url('https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-52379.jpg');
+}
